@@ -1,6 +1,6 @@
 <?php
 
-namespace Ngankt2\VnBank;
+namespace Ngankt2\VNBank;
 
 use Illuminate\Support\ServiceProvider;
 

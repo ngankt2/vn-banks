@@ -1,5 +1,5 @@
 {
-    "name": "ngankt2/vn-bank",
+    "name": "ngankt2/vn-banks",
     "description": "Danh sách các bank của Vn, json, sql, laravel migrate, model, filament resource",
     "type": "library",
     "autoload": {
@@ -24,7 +24,7 @@
     "extra": {
         "laravel": {
             "providers": [
-              "VnBankProvider"
+                "Ngankt2\\VNBank\\VnBankProvider"
             ]
         }
     },

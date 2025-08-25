@@ -1,11 +1,11 @@
 <?php
 
-namespace Ngankt2\VnBank;
+namespace Ngankt2\VNBank;
 
 use Filament\Contracts\Plugin;
 use Filament\Panel;
 
-class FilamentVnBankPlugins implements Plugin
+class FilamentVnBankPlugin implements Plugin
 {
     public function getId(): string
     {
