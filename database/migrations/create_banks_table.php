@@ -26,7 +26,7 @@ return new class extends Migration
             $table->timestamps();
         });
 
-        $sqlFile = __DIR__ . '/vn-bank.sql';
+        $sqlFile = __DIR__ . '/vn-banks.sql';
         if (file_exists($sqlFile)) {
             DB::unprepared(file_get_contents($sqlFile));
         }

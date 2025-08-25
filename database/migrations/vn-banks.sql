@@ -1,4 +1,4 @@
-INSERT INTO banks (name, bank_id, atm_bin, card_length, short_name, bank_code, type, swift_code) VALUES
+INSERT INTO vn_banks (name, bank_id, atm_bin, card_length, short_name, bank_code, type, swift_code) VALUES
                                                                                                      ('Visa', '4', '4', 13, 'Visa', '', '', ''),
                                                                                                      ('MasterCard', '5', '5', 16, 'MasterCard', '', '', ''),
                                                                                                      ('Ngân hàng An Bình', '970425', '970425', 16, 'ABBank', '323', 'ACC', 'ABBKVNVX'),
