@@ -4,6 +4,7 @@ namespace Ngankt2\VNBank;
 
 use Filament\Contracts\Plugin;
 use Filament\Panel;
+use Ngankt2\VNBank\Filament\Resources\VnBanks\VnBankResource;
 
 class FilamentVnBankPlugin implements Plugin
 {
@@ -15,7 +16,7 @@ class FilamentVnBankPlugin implements Plugin
     public function register(Panel $panel): void
     {
         $panel->resources([
-
+            VnBankResource::class
         ]);
 
     }
