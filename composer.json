@@ -1,0 +1,33 @@
+{
+    "name": "ngankt2/vn-bank",
+    "description": "Danh sách các bank của Vn, json, sql, laravel migrate, model, filament resource",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Ngankt2\\VNBank\\": "src"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "ngannv",
+            "email": "ngankt2@gmail.com"
+        },
+        {
+            "name": "CodeZiTeam",
+            "email": "codezi.pro@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.2"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+              "VnBankProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
