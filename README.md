@@ -68,7 +68,7 @@ Lưu ý: Tệp di cư sẽ tự động chèn dữ liệu từ `vn-bank.sql` n�
 ### Filament Panel
 Nếu sử dụng Filament, bạn có thể tích hợp bộ dữ liệu vào bảng điều khiển quản trị:
 ```php
-->plugin(VietnameseBanksPlugin::make())
+->plugin(FilamentVnBankPlugin::make())
 ```
 
 ## Giấy Phép
