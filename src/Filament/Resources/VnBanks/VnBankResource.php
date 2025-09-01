@@ -13,7 +13,9 @@ use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
+use Illuminate\Contracts\Support\Htmlable;
 use Ngankt2\VNBank\Filament\Resources\VnBanks\Pages\ManageVnBanks;
+use Ngankt2\VNBank\FilamentVnBankPlugin;
 use Ngankt2\VNBank\Models\VNBank;
 
 class VnBankResource extends Resource
@@ -21,6 +23,11 @@ class VnBankResource extends Resource
     protected static ?string $model = VNBank::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::Banknotes;
+
+    public static function getNavigationIcon(): string|BackedEnum|Htmlable|null
+    {
+        return FilamentVnBankPlugin::make()->getShowNavigationIcon() ? Heroicon::Banknotes : null;
+    }
 
     protected static ?string $recordTitleAttribute = 'name';
 

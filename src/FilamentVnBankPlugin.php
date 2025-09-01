@@ -8,6 +8,11 @@ use Ngankt2\VNBank\Filament\Resources\VnBanks\VnBankResource;
 
 class FilamentVnBankPlugin implements Plugin
 {
+    /**
+     * @var mixed|true
+     */
+    private bool $showNavigationIcon = true;
+
     public function getId(): string
     {
         return 'filament-vn-bank-plugins';
@@ -29,5 +34,15 @@ class FilamentVnBankPlugin implements Plugin
     public static function make(): static
     {
         return new static;
+    }
+
+    public function showNavigationIcon($bool=true): static
+    {
+        $this->showNavigationIcon = $bool;
+        return $this;
+    }
+    public function getShowNavigationIcon(): bool
+    {
+        return $this->showNavigationIcon;
     }
 }
