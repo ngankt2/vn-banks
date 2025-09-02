@@ -13,9 +13,11 @@ class FilamentVnBankPlugin implements Plugin
      */
     private bool $showNavigationIcon = true;
 
+    public static string $name = 'filament-vn-bank-plugins';
+
     public function getId(): string
     {
-        return 'filament-vn-bank-plugins';
+        return self::$name;
     }
 
     public function register(Panel $panel): void

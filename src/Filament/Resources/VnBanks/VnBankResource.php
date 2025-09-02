@@ -24,7 +24,7 @@ class VnBankResource extends Resource
 
     public static function getNavigationIcon(): string|BackedEnum|Htmlable|null
     {
-        return FilamentVnBankPlugin::make()->getShowNavigationIcon() ? Heroicon::Banknotes : null;
+        return filament(FilamentVnBankPlugin::$name)->getShowNavigationIcon() ? Heroicon::Banknotes : null;
     }
 
     protected static ?string $recordTitleAttribute = 'name';
