@@ -16,12 +16,12 @@ return new class extends Migration
         Schema::create('vn_banks', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('bank_id', 20)->unique();
-            $table->string('atm_bin', 20);
-            $table->integer('card_length');
-            $table->string('short_name');
-            $table->string('bank_code', 10);
-            $table->string('type', 10);
+            $table->string('bank_id', 20)->unique()->nullable();
+            $table->string('atm_bin', 20)->nullable();
+            $table->integer('card_length')->nullable();
+            $table->string('short_name')->nullable();
+            $table->string('bank_code', 10)->nullable();
+            $table->string('type', 10)->nullable();
             $table->string('swift_code', 20)->nullable();
             $table->timestamps();
         });
