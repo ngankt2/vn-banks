@@ -22,8 +22,6 @@ class VnBankResource extends Resource
 {
     protected static ?string $model = VNBank::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::Banknotes;
-
     public static function getNavigationIcon(): string|BackedEnum|Htmlable|null
     {
         return FilamentVnBankPlugin::make()->getShowNavigationIcon() ? Heroicon::Banknotes : null;
