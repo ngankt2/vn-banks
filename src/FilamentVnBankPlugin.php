@@ -12,6 +12,8 @@ class FilamentVnBankPlugin implements Plugin
      * @var mixed|true
      */
     private bool $showNavigationIcon = true;
+    private bool $addable = true;
+    private bool $deleteAble = true;
 
     public static string $name = 'filament-vn-bank-plugins';
 
@@ -46,5 +48,23 @@ class FilamentVnBankPlugin implements Plugin
     public function getShowNavigationIcon(): bool
     {
         return $this->showNavigationIcon;
+    }
+    public function setAddable($bool=true): static
+    {
+        $this->addable = $bool;
+        return $this;
+    }
+    public function getAddable(): bool
+    {
+        return $this->addable;
+    }
+    public function setDeleteAble($bool=true): static
+    {
+        $this->deleteAble = $bool;
+        return $this;
+    }
+    public function getDeleteAble(): bool
+    {
+        return $this->deleteAble;
     }
 }

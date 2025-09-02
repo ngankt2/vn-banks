@@ -7,6 +7,7 @@ use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
+use Filament\Actions\ExportBulkAction;
 use Filament\Forms\Components\TextInput;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
@@ -14,6 +15,7 @@ use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Contracts\Support\Htmlable;
+use Ngankt2\VNBank\Filament\Exports\VNBankExporter;
 use Ngankt2\VNBank\Filament\Resources\VnBanks\Pages\ManageVnBanks;
 use Ngankt2\VNBank\FilamentVnBankPlugin;
 use Ngankt2\VNBank\Models\VNBank;
@@ -105,10 +107,12 @@ class VnBankResource extends Resource
             ])
             ->recordActions([
                 EditAction::make(),
-                DeleteAction::make(),
+                DeleteAction::make()->visible(filament(FilamentVnBankPlugin::$name)->getDeleteAble()),
             ])
             ->toolbarActions([
-
+                BulkActionGroup::make([
+                    ExportBulkAction::make()->exporter(VNBankExporter::class)->label("Xuất danh sách ngân hàng"),
+                ]),
             ]);
     }
 
