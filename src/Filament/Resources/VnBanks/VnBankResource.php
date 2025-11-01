@@ -31,9 +31,19 @@ class VnBankResource extends Resource
 
     protected static ?string $recordTitleAttribute = 'name';
 
+    public static function getNavigationSort(): ?int
+    {
+        return config('vnbank.resource.sort', 10);
+    }
+
+    public static function getCluster(): ?string
+    {
+        return config('vnbank.resource.cluster', null);
+    }
+
     public static function getNavigationGroup(): ?string
     {
-        return __('nav.system');
+        return config('vnbank.resource.navigation_group', __('nav.system'));
     }
 
     // 2. Thêm label để hiển thị tên thân thiện
